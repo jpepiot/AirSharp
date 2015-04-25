@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{45B1315C-79EA-43C2-8379-1ECEBF3C2901}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AirSharp</RootNamespace>
+    <AssemblyName>AirSharpLib</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbstractMediaHandler.cs" />
+    <Compile Include="ErrorEventArgs.cs" />
+    <Compile Include="IMediaHandler.cs" />
+    <Compile Include="MediaSettings.cs" />
+    <Compile Include="Net\ByteArrayContent.cs" />
+    <Compile Include="PlaybackInfo.cs" />
+    <Compile Include="Player.cs" />
+    <Compile Include="Net\ByteParser.cs" />
+    <Compile Include="Net\ByteString.cs" />
+    <Compile Include="Net\ErrorEventArgs.cs" />
+    <Compile Include="Net\ConnectionReceivedEventArgs.cs" />
+    <Compile Include="Net\HttpListener.cs" />
+    <Compile Include="DefaultMediaHandler.cs" />
+    <Compile Include="PlaybackSettings.cs" />
+    <Compile Include="Net\Exceptions\HttpException.cs" />
+    <Compile Include="Net\HeaderCollection.cs" />
+    <Compile Include="Net\HttpContent.cs" />
+    <Compile Include="Net\HttpContext.cs" />
+    <Compile Include="Net\HttpHeaderConstants.cs" />
+    <Compile Include="Net\HttpListenerBase.cs" />
+    <Compile Include="Net\HttpMessage.cs" />
+    <Compile Include="Net\HttpProcessor.cs" />
+    <Compile Include="Net\HttpRequest.cs" />
+    <Compile Include="Net\HttpResponse.cs" />
+    <Compile Include="Net\IHttpRequestHandler.cs" />
+    <Compile Include="Net\ISession.cs" />
+    <Compile Include="Net\ISocketListener.cs" />
+    <Compile Include="Net\MediaType.cs" />
+    <Compile Include="ProgressEventArgs.cs" />
+    <Compile Include="PropertyList.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Net\Session.cs" />
+    <Compile Include="Net\SocketListener.cs" />
+    <Compile Include="Net\StreamContent.cs" />
+    <Compile Include="Net\StringContent.cs" />
+    <Compile Include="Net\TcpListenerBase.cs" />
+    <Compile Include="Net\Utils.cs" />
+    <Compile Include="StateChangedEventArgs.cs" />
+    <Compile Include="StateType.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
