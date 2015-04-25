@@ -1,7 +1,6 @@
 ﻿namespace AirSharp {
 
     using System;
-    using System.Diagnostics;
     using System.Globalization;
     using System.IO;
     using System.Net;
@@ -148,7 +147,6 @@
         /// Set the video rate
         /// </summary>
         public Task SetRate(int rate) {
-            Debug.WriteLine("Set rate : " + rate);
             return SendRequestTask("POST", "/rate?value=" + rate);
         }
 

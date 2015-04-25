@@ -45,7 +45,7 @@ namespace AirSharp {
                 case "string":
                     return val.Value;
                 case "integer":
-                    return int.Parse(val.Value);
+                    return long.Parse(val.Value);
                 case "real":
                     return float.Parse(val.Value, CultureInfo.InvariantCulture);
                 case "date":
@@ -62,7 +62,7 @@ namespace AirSharp {
                     List<dynamic> list = ParseArray(val.Elements());
                     return list;
                 default:
-                    throw new ArgumentException("Unsupported");
+                    throw new NotSupportedException(val.Name + " type is not supported");
             }
         }
     }
